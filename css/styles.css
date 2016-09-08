@@ -1,37 +1,55 @@
+.navbar-default {
+  background-color: #87ceec;
+  border-color: #87ceec;
+}
+
+.nav.navbar-nav.navbar-left a {
+  color: white;
+}
+
+.nav.navbar-nav.navbar-right a {
+  color: white;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
 html, body, input, select, textarea {
-    font-size: 1.05em !important;
+  background-color: #c3e7f5;
+  color: #22333a;
 }
 
 table, th , td {
-    border: none;
-    border-collapse: collapse;
-    padding: 5px;
+  border: none;
+  border-collapse: collapse;
+  padding: 5px;
 }
-   
+
 table tr:nth-child(odd) {
-    background-color: #ffffdf;
+  background-color: #ffffdf;
 }
 
 table tr:nth-child(even) {
-    background-color: #e3f2fd;
+  background-color: #e3f2fd;
 }
 
 .accordion__container {
-    background: #eee;
-    border: 1px solid #ccc;
-    padding: 20px;
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 20px;
 }
 .accordion__tab {
-    background: #aaa;
-    color: #fff;
-    border-bottom: 1px solid white;
+  background: #aaa;
+  color: #fff;
+  border-bottom: 1px solid white;
 }
 .accordion__tab-title {
-    background: #888;
-    padding: 5px;
-    cursor: pointer;
+  background: #888;
+  padding: 5px;
+  cursor: pointer;
 }
 .accordion__tab-content {
-    background: #999;
-    padding: 20px;
+  background: #999;
+  padding: 20px;
 }
