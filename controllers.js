@@ -35,16 +35,16 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
 
   $scope.convertToDate = function(dt) { 
     return new Date(dt * 1000);
-  };
+  }
 
   $scope.convertTemperature = function(temperatureForecast) {
     if ($routeParams.tempUnit === 'Fahrenheit') {
       return Math.round(temperatureForecast * (9/5) - 459.67) + "° F";
     } else if ($routeParams.tempUnit === 'Celsius') {
-        return Math.round(temperatureForecast - 273.15) + "° C";
+      return Math.round(temperatureForecast - 273.15) + "° C";
     } else
-        return Math.round(temperatureForecast) + "° K";
-  };
+      return Math.round(temperatureForecast) + "° K";
+  }
 
   $scope.activeTabs = [0];
 
@@ -52,7 +52,7 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
     if ($scope.activeTabs.indexOf(tab) > -1) {
       return true;
     } else {
-        return false;
+      return false;
     }
   }
 
@@ -63,7 +63,4 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
       $scope.activeTabs.push(tab);
     }
   }
-
-  console.log($scope.activeTabs);
-
 }]);
