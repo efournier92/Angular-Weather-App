@@ -1,0 +1,90 @@
+<h1>Forecast for {{ city }}</h1>
+<div ng-controller="forecastController">
+    <label for="days">Days to Forecast:</label>
+    <select ng-model="days" ng-options="day for day in daysList"></select>
+    <br />
+    <label for="tempUnit">Temperature Unit:</label>
+    <select ng-model="tempUnit" ng-options="unit for unit in tempUnitList"></select>
+    <a href="#/forecast/{{tempUnit}}/{{days}}" class="btn btn-primary">Switch</a>
+    <br /><br />
+    
+<!--
+    <div ng-repeat="result in weatherResult.list">
+        <div class="row">
+            <div class="col-md-12">
+                <weather-report weather-day="result" convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMMM d, y"></weather-report>
+            </div>
+        </div>
+    </div>
+-->
+	
+		<div ng-repeat="result in weatherResult.list">
+			<div class="accordion__tab">
+				<div class="accordion__tab-title" ng-click="openTab('tab one')">{{ convertToDate(result.dt) | date: dateFormat }}</div>
+				<div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
+				 <table>
+            <tr>
+                <th>
+                    High Temp 
+                </th>
+                <td>
+                    {{ result.temp.max }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Low Temp 
+                </th>
+                <td>
+                    {{ convertToStandard({ temperatureForecast: weatherDay.temp.min}) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Humidity 
+                </th>
+                <td>
+                    {{ weatherDay.humidity + "%" }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Cloud Coverage 
+                </th>
+                <td>
+                    {{ weatherDay.clouds + "%" }}
+                </td>
+            </tr>
+        </table>	
+				</div>
+			</div>
+		</div>
+	
+<!--
+		<div ng-repeat="result in weatherResult.list">
+		<div class="accordion__tab">
+		<div class="accordion__tab-title" ng-click="openTab('tab one')">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</div>
+		<div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
+			TEST!!
+		</div>
+</div>
+		</div>
+-->
+	
+	<!--
+    <div class="accordion__container">
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab one')">Tab 1</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">Tab content goes here!</div>
+        </div>
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab two')">Tab 2</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab two')">Tab content goes here!</div>
+        </div>
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab three')">Tab 3</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab three')">Tab content goes here!</div>
+        </div>
+    </div>
+-->
+</div>

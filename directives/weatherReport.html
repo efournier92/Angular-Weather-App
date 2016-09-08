@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
+    </div>
+    <div class="panel-body">
+        <table>
+            <tr>
+                <th>
+                    High Temp 
+                </th>
+                <td>
+                    {{ convertToStandard({ temperatureForecast: weatherDay.temp.max}) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Low Temp 
+                </th>
+                <td>
+                    {{ convertToStandard({ temperatureForecast: weatherDay.temp.min}) }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Humidity 
+                </th>
+                <td>
+                    {{ weatherDay.humidity + "%" }}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Cloud Coverage 
+                </th>
+                <td>
+                    {{ weatherDay.clouds + "%" }}
+                </td>
+            </tr>
+        </table>
+    </div>

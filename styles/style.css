@@ -1,0 +1,37 @@
+html, body, input, select, textarea {
+    font-size: 1.05em !important;
+}
+
+table, th , td {
+    border: none;
+    border-collapse: collapse;
+    padding: 5px;
+}
+   
+table tr:nth-child(odd) {
+    background-color: #ffffdf;
+}
+
+table tr:nth-child(even) {
+    background-color: #e3f2fd;
+}
+
+.accordion__container {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.accordion__tab {
+    background: #aaa;
+    color: #fff;
+    border-bottom: 1px solid white;
+}
+.accordion__tab-title {
+    background: #888;
+    padding: 5px;
+    cursor: pointer;
+}
+.accordion__tab-content {
+    background: #999;
+    padding: 20px;
+}
