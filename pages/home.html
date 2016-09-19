@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-
     <h4>Search By City</h4>
+
     <div class="form-group">
       <input type="text" ng-model="city" class="form-control" />
       <br />
@@ -9,7 +9,7 @@
       <select ng-model="days" ng-options="day for day in daysList"></select>
       <select ng-model="tempUnit" ng-options="unit for unit in tempUnitList"></select>
     </div>
-    <a href="#/forecast/{{ tempUnit }}/{{ days }}/" class="btn btn-primary">Get Forecast</a>
 
+    <a href="#/forecast/{{ tempUnit }}/{{ days }}/" class="btn btn-primary">Get Forecast</a>
   </div>
 </div>

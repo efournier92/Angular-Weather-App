@@ -1,6 +1,11 @@
 <div class="accordion__tab">
-		<div class="accordion__tab-title" ng-click="openTab('tab one')">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</div>
+
+		<div class="accordion__tab-title" ng-click="openTab('tab one')">
+      {{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}
+    </div>
+
 		<div class="accordion__tab-content" ng-show="isOpenTab('tab one')">
 			TEST!!
 		</div>
+
 </div>
