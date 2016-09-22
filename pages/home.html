@@ -1,15 +1,24 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h4>Search By City</h4>
-
-    <div class="form-group">
-      <input type="text" ng-model="city" class="form-control" />
-      <br />
-      <label for="days">Days to Forecast:</label>
-      <select ng-model="days" ng-options="day for day in daysList"></select>
-      <select ng-model="tempUnit" ng-options="unit for unit in tempUnitList"></select>
-    </div>
-
-    <a href="#/forecast/{{ tempUnit }}/{{ days }}/" class="btn btn-primary">Get Forecast</a>
-  </div>
+	<div class="col-md-6 col-md-offset-3">
+		<h4>Search By City</h4>
+		<form ng-submit="submit(days, tempUnit)">
+			<div class="form-group">
+				<input type="text" ng-model="city" class="form-control" />
+				<br />
+				<label for="days">Days to Forecast:</label>
+				<select ng-model="days" ng-options="day for day in daysList"></select>
+				<br />
+				<label for="tempUnit">Temperature Unit:</label>
+				<select ng-model="tempUnit" ng-options="unit for unit in tempUnitList"></select>
+			</div>
+			<input type=submit value="Get Forecast" class="btn btn-primary" />
+			
+			
+<!--
+					<a href="#/forecast/{{ tempUnit }}/{{ days }}/" 
+								class="btn btn-primary">Get Forecast</a>
+-->
+			</form>
+			</div>
+	
 </div>
