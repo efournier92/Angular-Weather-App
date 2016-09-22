@@ -6,13 +6,13 @@
 	<label for="tempUnit">Temperature Unit:</label>
 	<select ng-model="tempUnit" ng-options="unit for unit in tempUnitList"></select> <a href="#/forecast/{{tempUnit}}/{{days}}" class="btn btn-primary">Switch</a>
 	<br />
-	<div class="row"> <span class="btn btn-default pull-right" ng-click="status.isDayOpen=!status.isDayOpen" style="margin-right:28px">{{ status.isDayOpen ? "Collapse" : "Expand" }} All</span> </div>
+	<div class="row"> <span class="btn btn-default pull-right" ng-click="status.isAllOpen = !status.isAllOpen" style="margin-right:28px">{{ status.isAllOpen ? "Collapse" : "Expand" }} All</span> </div>
 	<br />
 	<div ng-repeat="w in weatherResult.list">
 		<div class="row-fluid">
 			<div class="col-md-4" style="text-align:center;">
 				<weather-report weather-day="w" convert-temp="convertTemperature(daytimeTemp)" convert-date="convertDate(dt)" date-format="MMMM d, y" status="status"></weather-report>
-			</div>
+			</div>		
 		</div>
 	</div>
 </div>

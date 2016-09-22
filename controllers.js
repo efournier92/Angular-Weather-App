@@ -44,7 +44,6 @@ forecaster.controller('forecastController', ['$scope', '$resource', '$routeParam
   }
 	
 	$scope.status = {
-		isDayOpen: true,
 		isAllOpen: true,
 	}
 	
