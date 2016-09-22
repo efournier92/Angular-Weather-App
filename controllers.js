@@ -17,7 +17,6 @@ forecaster.controller('homeController', ['$scope', '$location', 'cityService', f
 	
 }]);
 
-
 forecaster.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
 
   $scope.city = cityService.city;
@@ -52,5 +51,4 @@ forecaster.controller('forecastController', ['$scope', '$resource', '$routeParam
 	$scope.status = {
 		isAllOpen: true,
 	}
-	
 }]);

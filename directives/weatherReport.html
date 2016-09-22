@@ -1,6 +1,9 @@
 <div class="panel panel-default">
 	<uib-accordion>
-		<div uib-accordion-group class="panel-default" is-open="status.isAllOpen" heading="{{ convertDate({ dt: weatherDay.dt }) | date: dateFormat }}">
+		<div uib-accordion-group class="panel-default"
+				 is-open="status.isAllOpen"
+				 heading="{{ convertDate({ dt: weatherDay.dt }) | date: dateFormat }}">
+			
 			<table style="margin:0 auto;">
 				<tr>
 					<th>High Temp</th>
@@ -19,6 +22,7 @@
 					<td>{{ weatherDay.clouds + "%" }}</td>
 				</tr>
 			</table>
+			
 		</div>
 	</uib-accordion>
 </div>
