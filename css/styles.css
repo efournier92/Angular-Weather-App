@@ -1,3 +1,8 @@
+html, body, input {
+  background-color: #c3e7f5;
+  color: #22333a;
+}
+
 .navbar-default {
   background-color: #87ceec;
   border-color: #87ceec;
@@ -15,14 +20,29 @@
   color: white;
 }
 
-html, body, input, select, textarea {
-  background-color: #c3e7f5;
-  color: #22333a;
+.navbar-default 
+.navbar-brand:hover,
+.navbar-default 
+.navbar-brand:focus {
+	color: white;	
+}
+
+.panel {
+	border: none;
+	background-color: #87ceec;
+}
+
+.panel-heading {
+	background-color: #f2f2f2;
+}
+
+h4.panel-title {
+	color: #1f94c7;
+	font-weight: bold;
 }
 
 table, th , td {
   border: none;
-  border-collapse: collapse;
   padding: 5px;
 }
 
@@ -42,14 +62,14 @@ table tr:nth-child(even) {
 .accordion__tab {
   background: #aaa;
   color: #fff;
-  border-bottom: 1px solid white;
+	margin-bottom: 4px;
 }
 .accordion__tab-title {
-  background: #888;
+  background: #87ceec;
   padding: 5px;
   cursor: pointer;
 }
 .accordion__tab-content {
-  background: #999;
+  background: #c3e7f5;
   padding: 20px;
 }

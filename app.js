@@ -1,1 +1,1 @@
-var weatherApp = angular.module('weatherApp', ['ui.bootstrap', 'ngRoute', 'ngResource'])
+var forecaster = angular.module('forecaster', ['ui.bootstrap', 'ngRoute', 'ngAnimate', 'ngSanitize', 'ngResource'])

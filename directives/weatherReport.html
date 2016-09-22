@@ -1,24 +1,24 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
-    </div>
-    <div class="panel-body">
-        <table>
-            <tr>
-                <th>High Temp</th>
-                <td>{{ convertToStandard({ temperatureForecast: weatherDay.temp.max}) }}</td>
-            </tr>
-            <tr>
-                <th>Low Temp</th>
-                <td>{{ convertToStandard({ temperatureForecast: weatherDay.temp.min}) }}</td>
-            </tr>
-            <tr>
-                <th>Humidity</th>
-                <td>{{ weatherDay.humidity + "%" }}</td>
-            </tr>
-            <tr>
-                <th>Cloud Coverage</th>
-                <td>{{ weatherDay.clouds + "%" }}</td>
-            </tr>
-        </table>
-    </div>
+	<uib-accordion>
+		<div uib-accordion-group class="panel-default" is-open="status.isDayOpen" heading="{{ convertDate({ dt: weatherDay.dt }) | date: dateFormat }}">
+		<table style="margin:0 auto;">
+			<tr>
+				<th>High Temp</th>
+				<td>{{ convertTemp({ daytimeTemp: weatherDay.temp.max}) }}</td>
+			</tr>
+			<tr>
+				<th>Low Temp</th>
+				<td>{{ convertTemp({ daytimeTemp: weatherDay.temp.min}) }}</td>
+			</tr>
+			<tr>
+				<th>Humidity</th>
+				<td>{{ weatherDay.humidity + "%" }}</td>
+			</tr>
+			<tr>
+				<th>Cloud Coverage</th>
+				<td>{{ weatherDay.clouds + "%" }}</td>
+			</tr>
+		</table>
+		</div>
+	</uib-accordion>
+</div>

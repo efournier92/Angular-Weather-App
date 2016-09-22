@@ -1,3 +1,3 @@
-weatherApp.service('cityService', function() {
+forecaster.service('cityService', function() {
     this.city = "New York, NY";
 });

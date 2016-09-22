@@ -1,26 +1,14 @@
-weatherApp.directive("weatherReport", function() {
+forecaster.directive("weatherReport", function() {
     return {
         restrict: 'E',
         templateUrl: 'directives/weatherReport.html',
         replace: true,
         scope: {
             weatherDay: "=",
-            convertToStandard: "&",
-            convertToDate: "&",
+            convertTemp: "&",
+            convertDate: "&",
             dateFormat: "@",
-        }
-    }
-});
-
-weatherApp.directive("weatherReportAccordion", function() {
-    return {
-        restrict: 'E',
-        templateUrl: 'directives/weatherReportAccordion.html',
-        scope: {
-            weatherDay: "=",
-            convertToStandard: "&",
-            convertToDate: "&",
-            dateFormat: "@",
+						status: "=",
         }
     }
 });

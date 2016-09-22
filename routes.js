@@ -1,4 +1,4 @@
-weatherApp.config(function($routeProvider) {
+forecaster.config(function($routeProvider) {
                   
     $routeProvider
                   
